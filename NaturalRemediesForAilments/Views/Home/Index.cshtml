@@ -3,7 +3,108 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Natural Remedies for ailments</h1>
+    <form action="https://localhost:7297/Ailment">
+        <button type="submit" class="button">Healing Starts Here!</button>
+    </form>
 </div>
 
+<style>
+
+   .display-4{
+    border: solid;
+    
+    background-color: yellow;
+
+    }
+
+   body{
+       background-image: url(images/natural.jpg);
+       background-repeat: no-repeat;
+       background-size: cover;
+   }
+   .button {
+    font-size:1em;
+    padding: 1em 2em;
+    background-color:yellow;
+    color: green;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-style:italic;
+
+   }
+
+   h1{
+    background-color:green;
+    font-style:oblique;
+    color:green;
+    font-family:'Floral Font',cursive;
+    
+   }
+
+     
+
+   nav ul {
+       float: right;
+       list-style: none;
+       margin:0;
+       padding: 0;
+
+   }
+
+   nav li {
+       display: inline-block;
+       margin: 0 10px;
+   }
+
+   nav a {
+       color:yellow;
+       font-family: 'Open Sans',sans-serif;
+       font-size:16px;
+       text-decoration:none;
+       text-tranform:uppercase;
+   }
+
+   /* Sticky header */
+   .sticky {
+       animation: slideDown 0.5s;
+       background-color: yellow;
+       box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+       height:80px;
+       padding:20px;
+       position:fixed;
+       top: 0;
+       width:100%;
+       z-index:999;
+   }
+
+   
+        
+
+</style>
+
+<!-- @section scripts {
+<script>
+    $(document).ready(function () {
+        $('#welcome-btn').click(function () {
+            // Handle the button click event here
+            alert('Welcome to our website!');
+        });
+    });
+</script>
+-->
+
+<script>
+    $(window).on('scroll', function () {
+        var scrollPosition = $(window).scrollTop();
+
+        if (scrollPosition >= 100) {
+            $('header').addClass('sticky');
+        } else {
+            $('header').removeClass('sticky');
+        }
+    });
+</script>
+
+}

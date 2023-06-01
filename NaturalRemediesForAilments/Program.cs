@@ -1,7 +1,21 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using MySql.Data.MySqlClient;
+using System.Data;
+using NaturalRemediesForAilments;
+
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IDbConnection>((s) =>
+{
+    IDbConnection conn = new MySqlConnection(builder.Configuration.GetConnectionString("natural_cure_for_ailments"));
+    conn.Open();
+    return conn;
+});
+
+builder.Services.AddTransient<IAilmentRepository, AilmentRepository>();
+
 
 var app = builder.Build();
 

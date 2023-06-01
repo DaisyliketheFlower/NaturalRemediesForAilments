@@ -1,0 +1,94 @@
+﻿@model IEnumerable<Ailment>
+<style>
+
+    .display-4 {
+        border: solid;
+        background-color: red;
+    }
+
+    body {
+
+        background-image: url(images/herbs.jpg);
+       
+    
+            
+    }
+
+    h1 {
+        color: red;
+        background-color: yellow;
+        font-family: 'Floral Font' cursive;
+        font-style: oblique;
+    }
+
+    h2 {
+        color: red;
+        background-color: yellow;
+        font-family: 'Floral Font' cursive;
+        font-style: oblique;
+    }
+
+  
+   
+</style>
+
+<h1>All Ailments</h1>
+<br />
+
+
+
+
+
+
+
+@foreach (var item in @Model)
+{
+    <div class="Diarrhea">
+        <h2>Diarrhea</h2>
+        <img src="images/bananacoconut.jpg" alt="Diarrhea" />
+        <p>@item.Price</p>
+        <p>@item.Remedies</p>
+    </div>
+    <br />
+
+
+    <br />
+
+    <div class="Acne">
+        <h2>Diarrhea</h2>
+        <img src="images/Chlorophyll.jpg" alt="Acne" />
+        <p>@item.Price</p>
+        <p>@item.Remedies</p>
+    </div>
+    <br />
+
+    <div class="Constipation">
+        <h2>Constipation</h2>
+        <img src="images/Probiotic.jpg" alt="Constipation" />
+        <p>@item.Price</p>
+        <p>@item.Remedies</p>
+    </div>
+    <br />
+
+
+    <div class="Fever">
+        <h2>Fever</h2>
+        <img src="images/vitamincChamomile.jpg" alt="Fever" />
+        <p>@item.Price</p>
+        <p>@item.Remedies</p>
+    </div>
+    <br />
+
+    <div class="Cold Sore">
+        <h2>Cold Sore</h2>
+        <img src="images/Cold Sore.jpg" alt="Cold Sore" />
+        <p>@item.Price</p>
+        <p>@item.Remedies</p>
+        </div>
+
+
+
+
+
+
+}

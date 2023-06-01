@@ -10,4 +10,21 @@
     <PackageReference Include="MySql.Data" Version="8.0.33" />
     <PackageReference Include="Dapper" Version="2.0.123" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\Ailments\" />
+    <None Remove="Views\Ailment\cold.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Ailment\" />
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Ailment\cold.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
 </Project>
