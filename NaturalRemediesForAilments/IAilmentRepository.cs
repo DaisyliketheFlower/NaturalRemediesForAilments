@@ -10,6 +10,7 @@ namespace NaturalRemediesForAilments
         public Ailment GetAilment(int id);
         public void UpdateAilment(Ailment ailmentToUpdate );
         public void InsertAilment(Ailment AilmentToInsert);
+        public Ailment GetTheAilments();
         
         
 	}

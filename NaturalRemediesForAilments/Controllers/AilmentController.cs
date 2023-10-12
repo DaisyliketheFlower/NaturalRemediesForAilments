@@ -39,7 +39,7 @@ namespace NaturalRemediesForAilments.Controllers
 
         public IActionResult InsertAilments()
         {
-            var ailments = repo;
+            var ailments = repo.GetTheAilments();
             return View(ailments);
         }
 
